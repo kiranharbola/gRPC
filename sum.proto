@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package calculate;
+
+message Adddata
+{
+	int32 num1=1;
+	int32 num2=2;
+
+}
+
+message Addrequest
+{
+	Adddata adddata=1;
+}
+
+message AddResponse
+{
+	string  result=1;
+}
+
+service AddService
+{
+	rpc Add(Addrequest) returns (AddResponse){};
+}
+
+
+							

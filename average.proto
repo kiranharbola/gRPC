@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package Average;
+
+message AverageNumberRequest
+{
+	repeated int32 number=4;  }
+
+message AverageNumberRespsonse
+{
+	float finaloutput=1;
+}
+
+service FindAverage
+{
+	rpc GetAverageNumber(stream AverageNumberRequest) returns (AverageNumberRespsonse){}
+}
